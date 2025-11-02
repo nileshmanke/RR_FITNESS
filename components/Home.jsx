@@ -84,10 +84,10 @@ export default function Home() {
       >
         {/* Hero background image */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
+          className="absolute inset-0 bg-cover bg-center opacity-70"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80')",
+              "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170')",
           }}
         />
 
@@ -100,7 +100,7 @@ export default function Home() {
             Welcome to{" "}
             <span className="text-blue-600">RR Fitness & Nutrition Club</span>
           </h1>
-          <p className="text-gray-700 mb-6 text-base sm:text-lg leading-relaxed">
+          <p className="text-black font-semibold mb-6 text-base sm:text-lg leading-relaxed">
             Transform your body, mind, and lifestyle with expert trainers and
             personalized nutrition plans. Join our community and begin your
             transformation today!

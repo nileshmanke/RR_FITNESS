@@ -15,7 +15,7 @@ export default function DietHero() {
     <section className=" mt-6 relative flex items-center justify-center text-center min-h-[60vh] md:min-h-[72vh] px-6">
       {/* Responsive background image (shows top on small devices) */}
       <img
-        src="https://images.unsplash.com/photo-1543353071-087092ec3930?auto=format&fit=crop&w=1600&q=80"
+        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1153"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-40 pointer-events-none"
