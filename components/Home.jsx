@@ -126,13 +126,23 @@ export default function Home() {
       </section>
 
 
-<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-2 tracking-wide mt-5">
-  --- Male Section ---
-</h1>
+<div className="relative flex flex-col items-center justify-center text-center py-10 px-4 overflow-hidden rounded-2xl shadow-lg bg-gradient-to-r from-sky-700 via-blue-800 to-indigo-900 text-white mt-8">
+  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170')] opacity-20 bg-cover bg-center"></div>
+
+  <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wide">
+    Male Section
+  </h1>
+  <p className="relative z-10 text-blue-200 text-sm sm:text-base mt-2">
+    Transform Strength • Power • Endurance
+  </p>
+  <div className="relative z-10 mt-4 w-28 h-[3px] bg-gradient-to-r from-cyan-300 to-blue-400 rounded-full"></div>
+</div>
+
+
 
 
     {/* Three responsive program cards (1 column mobile, 2 on md, 3 on lg) */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:p-20  md:p-30">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8 sm:p-20  md:p-40">
   {/* Card 1 - Weight Loss */}
 
   
@@ -234,12 +244,21 @@ export default function Home() {
 
 
 
-<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-2 tracking-wide mt-5">
-  --- Female Section ---
-</h1>
+<div className="relative flex flex-col items-center justify-center text-center py-10 px-4 overflow-hidden rounded-2xl shadow-lg bg-gradient-to-r from-pink-600 via-rose-700 to-fuchsia-800 text-white">
+  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1600&q=80')] opacity-25 bg-cover bg-center"></div>
+
+  <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wide">
+    Female Section
+  </h1>
+  <p className="relative z-10 text-pink-100 text-sm sm:text-base mt-2">
+    Strength • Confidence • Balance
+  </p>
+  <div className="relative z-10 mt-4 w-28 h-[3px] bg-gradient-to-r from-pink-200 via-rose-300 to-fuchsia-400 rounded-full"></div>
+</div>
+
 
 {/* Three responsive program cards (1 column mobile, 2 on md, 3 on lg) */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:p-20  md:p-30">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  p-8 sm:p-20  md:p-40">
   {/* Card 1 - Weight Loss */}
   <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
     <div className="h-48 md:h-56 w-full">
