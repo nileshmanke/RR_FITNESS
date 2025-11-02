@@ -11,6 +11,7 @@ import MaleFatLoss from '../components/MaleFatLoss';
 import FemaleWeightLoss from '../components/FemaleweightLoss';
 import FemaleWeightGain from '../components/FemaleweightGain';
 import FemaleFatLoss from '../components/FemaleweightLoss';
+import ScrollToTop from '../components/ScrollToTop';
 
 
 
@@ -23,6 +24,7 @@ function App() {
     <>
       
       <Router>
+          <ScrollToTop />
       <Header />
 
 
