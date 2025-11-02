@@ -17,7 +17,7 @@ const program = {
   expected:
     "2–4 kg lean muscle gain with improved strength, tone and body composition.",
   hero:
-    "https://images.unsplash.com/photo-1594737625785-cbdb6f3b8a62?auto=format&fit=crop&w=1600&q=80",
+    "https://images.pexels.com/photos/6455843/pexels-photo-6455843.jpeg",
 };
 
 function formatCurrency(n) {

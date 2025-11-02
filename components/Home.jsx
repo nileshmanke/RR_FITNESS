@@ -214,7 +214,7 @@ export default function Home() {
   <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
     <div className="h-48 md:h-56 w-full">
       <img
-        src="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?auto=format&fit=crop&w=687&q=80"
+        src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=698"
         alt="Fat loss and conditioning"
         className="w-full h-full object-cover"
         loading="lazy"
@@ -263,7 +263,7 @@ export default function Home() {
   <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
     <div className="h-48 md:h-56 w-full">
       <img
-        src="https://images.unsplash.com/photo-1634463278803-f9f71890e67d?auto=format&fit=crop&w=1170&q=80"
+        src="https://images.pexels.com/photos/6975465/pexels-photo-6975465.jpeg"
         alt="Weight loss training"
         className="w-full h-full object-cover"
         loading="lazy"
@@ -293,7 +293,7 @@ export default function Home() {
   <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
     <div className="h-48 md:h-56 w-full">
       <img
-        src="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=format&fit=crop&w=1170&q=80"
+        src="https://images.pexels.com/photos/6975474/pexels-photo-6975474.jpeg"
         alt="Weight gain / bulking training"
         className="w-full h-full object-cover"
         loading="lazy"
@@ -323,7 +323,7 @@ export default function Home() {
   <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
     <div className="h-48 md:h-56 w-full">
       <img
-        src="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?auto=format&fit=crop&w=687&q=80"
+        src="https://images.pexels.com/photos/7991916/pexels-photo-7991916.jpeg"
         alt="Fat loss and conditioning"
         className="w-full h-full object-cover"
         loading="lazy"

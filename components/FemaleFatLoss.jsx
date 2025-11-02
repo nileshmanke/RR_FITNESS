@@ -17,7 +17,7 @@ const program = {
   expected:
     "Noticeable reduction in body fat %, improved muscle tone, better energy and posture.",
   hero:
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1600&q=80",
+    "https://images.pexels.com/photos/3854563/pexels-photo-3854563.jpeg",
 };
 
 function formatCurrency(n) {
