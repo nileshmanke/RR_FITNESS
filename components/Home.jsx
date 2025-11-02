@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DietHero from "./DietCompo";
-import Programs from "./Programs";
+import { NavLink } from "react-router-dom";
+
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
@@ -123,10 +124,255 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-2 tracking-wide mt-5">
+  --- Male Section ---
+</h1>
+
+
+    {/* Three responsive program cards (1 column mobile, 2 on md, 3 on lg) */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:p-20  md:p-30">
+  {/* Card 1 - Weight Loss */}
+
+  
+
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://images.unsplash.com/photo-1634463278803-f9f71890e67d?auto=format&fit=crop&w=1170&q=80"
+        alt="Weight loss training"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Weight Loss</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Customized calorie-deficit plans with strength & cardio to burn fat efficiently and retain muscle.
+      </p>
+
+      <div className="mt-4">
+
+        <NavLink to="/weightlossmale" >
+        <a
+          href="/programs/male-weight-loss"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+        </NavLink>
+      </div>
+    </div>
+  </article>
+
+  
+
+  {/* Card 2 - Weight Gain */}
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=format&fit=crop&w=1170&q=80"
+        alt="Weight gain / bulking training"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Weight Gain</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Evidence-backed bulking programs with progressive overload and calorie-dense nutrition for lean mass.
+      </p>
+
+      <div className="mt-4">
+
+        <NavLink to="/maleweightgain" >
+        <a
+          href="/programs/male-weight-gain"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+        </NavLink>
+      </div>
+    </div>
+  </article>
+
+  {/* Card 3 - Fat Loss */}
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?auto=format&fit=crop&w=687&q=80"
+        alt="Fat loss and conditioning"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Fat Loss</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Targeted routines and macro-focused nutrition to reduce body fat while preserving strength and performance.
+      </p>
+
+      <div className="mt-4">
+        <NavLink to="/fatlossmale" >
+        <a
+          href="/programs/male-fat-loss"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+
+        </NavLink>
+      </div>
+    </div>
+  </article>
+</div>
+
+
+
+<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-2 tracking-wide mt-5">
+  --- Female Section ---
+</h1>
+
+{/* Three responsive program cards (1 column mobile, 2 on md, 3 on lg) */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:p-20  md:p-30">
+  {/* Card 1 - Weight Loss */}
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://images.unsplash.com/photo-1634463278803-f9f71890e67d?auto=format&fit=crop&w=1170&q=80"
+        alt="Weight loss training"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Weight Loss</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Customized calorie-deficit plans with strength & cardio to burn fat efficiently and retain muscle.
+      </p>
+
+      <div className="mt-4">
+        <NavLink to="/femaleweightloss">
+        <a
+          href="/programs/male-weight-loss"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+        </NavLink>
+      </div>
+    </div>
+  </article>
+
+  {/* Card 2 - Weight Gain */}
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=format&fit=crop&w=1170&q=80"
+        alt="Weight gain / bulking training"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Weight Gain</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Evidence-backed bulking programs with progressive overload and calorie-dense nutrition for lean mass.
+      </p>
+
+      <div className="mt-4">
+        <NavLink to="/femaleweightgain">
+        <a
+          href="/programs/male-weight-gain"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+        </NavLink>
+      </div>
+    </div>
+  </article>
+
+  {/* Card 3 - Fat Loss */}
+  <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+    <div className="h-48 md:h-56 w-full">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?auto=format&fit=crop&w=687&q=80"
+        alt="Fat loss and conditioning"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="p-5 flex-1 flex flex-col">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Fat Loss</h3>
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        Targeted routines and macro-focused nutrition to reduce body fat while preserving strength and performance.
+      </p>
+
+      <div className="mt-4">
+        <NavLink to="/femalefatloss">
+        <a
+          href="/programs/male-fat-loss"
+          className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+        >
+          Read more
+        </a>
+        </NavLink>
+      </div>
+    </div>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
-        <Programs/>
-
+      
       {/* Programs Section */}
       <section id="programs" className="relative z-10 mt-16 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">

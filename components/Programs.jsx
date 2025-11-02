@@ -1,6 +1,7 @@
 import React from "react";
 import { MaleProgramDetails } from "./MaleProgramDetails";
 import { FemaleProgramDetails } from "./FemaleProgramDetails";
+import { Link } from "react-router-dom";
 
 export default function Programs() {
   return (
@@ -11,28 +12,33 @@ export default function Programs() {
 
       {/* ===== MALE SECTION ===== */}
       <div className="mb-12">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">
-          Male Programs
-        </h3>
+  <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">
+    Male Programs
+  </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <ProgramCard
-            title="Weight Loss Program"
-            img="https://images.unsplash.com/photo-1634463278803-f9f71890e67d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            desc="Customized calorie deficit, strength training, and cardio mix to help men burn fat efficiently."
-          />
-          <ProgramCard
-            title="Weight Gain Program"
-            img="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            desc="Muscle-building workouts and high-protein diet plans designed to increase lean body mass safely."
-          />
-          <ProgramCard
-            title="Fat Loss Program"
-            img="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
-            desc="Targeted routines and macro-focused nutrition to reduce body fat while preserving muscle."
-          />
-        </div>
-      </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <ProgramCard
+      id="male-weight-loss"
+      title="Weight Loss Program"
+      img="https://images.unsplash.com/photo-1634463278803-f9f71890e67d?auto=format&fit=crop&w=1170&q=80"
+      desc="Customized calorie deficit, strength training, and cardio mix to help men burn fat efficiently."
+    />
+
+    <ProgramCard
+      id="male-weight-gain"
+      title="Weight Gain Program"
+      img="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=format&fit=crop&w=1170&q=80"
+      desc="Muscle-building workouts and high-protein diet plans designed to increase lean body mass safely."
+    />
+
+    <ProgramCard
+      id="male-fat-loss"
+      title="Fat Loss Program"
+      img="https://plus.unsplash.com/premium_photo-1671717726440-48628d927404?auto=format&fit=crop&w=687&q=80"
+      desc="Targeted routines and macro-focused nutrition to reduce body fat while preserving muscle."
+    />
+  </div>
+</div>
 
 
       <MaleProgramDetails/>
@@ -70,21 +76,20 @@ export default function Programs() {
 }
 
 /* ---- Card Component ---- */
-function ProgramCard({ title, img, desc }) {
+function ProgramCard({ id, title, img, desc }) {
   return (
-    <div className="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden transition transform hover:-translate-y-1">
+    <Link
+      to={`/programs/${id}`}
+      className="block text-left bg-white rounded-2xl shadow hover:shadow-lg transition transform hover:-translate-y-1 overflow-hidden"
+    >
       <div className="h-44 w-full">
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <img src={img} alt={title} className="w-full h-full object-cover" loading="lazy" />
       </div>
+
       <div className="p-5">
-        <h4 className="text-lg font-semibold text-gray-800 mb-2">{title}</h4>
-        <p className="text-sm text-gray-600">{desc}</p>
+        <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
+        <p className="text-sm text-gray-600 mt-2 line-clamp-3">{desc}</p>
       </div>
-    </div>
+    </Link>
   );
 }
