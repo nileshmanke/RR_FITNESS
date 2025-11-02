@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DietHero from "./DietCompo";
+import Programs from "./Programs";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
@@ -84,7 +85,7 @@ export default function Home() {
       >
         {/* Hero background image */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-70"
+          className="absolute inset-0 bg-cover bg-center opacity-50 md:opacity-40"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170')",
@@ -100,7 +101,7 @@ export default function Home() {
             Welcome to{" "}
             <span className="text-blue-600">RR Fitness & Nutrition Club</span>
           </h1>
-          <p className="text-black font-semibold mb-6 text-base sm:text-lg leading-relaxed">
+          <p className="text-black font-bold md:font-semibold mb-6 text-base sm:text-lg leading-relaxed">
             Transform your body, mind, and lifestyle with expert trainers and
             personalized nutrition plans. Join our community and begin your
             transformation today!
@@ -115,13 +116,16 @@ export default function Home() {
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition text-sm sm:text-base"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition text-sm sm:text-base"
             >
               Contact Us
             </a>
           </div>
         </div>
       </section>
+        
+
+        <Programs/>
 
       {/* Programs Section */}
       <section id="programs" className="relative z-10 mt-16 px-6 max-w-6xl mx-auto">
@@ -148,59 +152,11 @@ export default function Home() {
           </div>
 
 
-           {/* Strength Training */}
-          <div className="bg-white shadow rounded-xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80"
-              alt="Strength Training"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-5">
-              <h3 className="text-lg font-semibold text-gray-800">
-                Fat Loss
-              </h3>
-              <p className="text-sm text-gray-600 mt-2">
-                Build lean muscle and endurance with expert-designed strength
-                programs.
-              </p>
-            </div>
-          </div>
+           
 
-           {/* Strength Training */}
-          <div className="bg-white shadow rounded-xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80"
-              alt="Strength Training"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-5">
-              <h3 className="text-lg font-semibold text-gray-800">
-                Weight Gain
-              </h3>
-              <p className="text-sm text-gray-600 mt-2">
-                Build lean muscle and endurance with expert-designed strength
-                programs.
-              </p>
-            </div>
-          </div>
+          
 
-           {/* Strength Training */}
-          <div className="bg-white shadow rounded-xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80"
-              alt="Strength Training"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-5">
-              <h3 className="text-lg font-semibold text-gray-800">
-                Weight Loss
-              </h3>
-              <p className="text-sm text-gray-600 mt-2">
-                Build lean muscle and endurance with expert-designed strength
-                programs.
-              </p>
-            </div>
-          </div>
+           
 
           {/* Cardio Workouts */}
           <div className="bg-white shadow rounded-xl overflow-hidden">
