@@ -5,10 +5,19 @@ export default function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
 
   useEffect(() => {
-    // Show popup after 5 seconds
-    const t = setTimeout(() => setShowWelcome(true), 5000);
-    return () => clearTimeout(t);
-  }, []);
+  // Check if the popup was shown before
+  const hasSeenPopup = localStorage.getItem("rr_welcome_shown");
+
+  // If not shown before, set timer and show it after 5 seconds
+  if (!hasSeenPopup) {
+    const timer = setTimeout(() => {
+      setShowWelcome(true);
+      localStorage.setItem("rr_welcome_shown", "true"); // mark as shown
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }
+}, []);
 
   return (
     <>
