@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DietHero from "./DietCompo";
 import { NavLink } from "react-router-dom";
+import GetFreeDietPlan from "./GetFreeDietPlan";
 
 
 export default function Home() {
@@ -379,7 +380,7 @@ export default function Home() {
 
 
 
-
+<GetFreeDietPlan/>
 
 
 
