@@ -40,6 +40,12 @@ export default function GetFreeDietPlan() {
   function validate() {
     if (!form.name.trim()) return "Please enter your name.";
     if (!form.email.trim()) return "Please enter your email.";
+    if (form.phone.trim()) {
+    const cleaned = form.phone.replace(/\D/g, ""); // remove spaces/dashes
+    if (cleaned.length !== 10) {
+      return "Please enter a valid 10-digit phone number.";
+    }
+  }
     // simple email regex
     if (!/^\S+@\S+\.\S+$/.test(form.email)) return "Please enter a valid email.";
     if (!form.heightCm || isNaN(Number(form.heightCm))) return "Please enter height in cm.";
