@@ -4,9 +4,9 @@ import { init, send } from "@emailjs/browser";
 
 export default function GetFreeDietPlan() {
   // Replace these with your EmailJS values
-  const SERVICE_ID = "service_q3msuai";
-  const TEMPLATE_ID = "template_xpfaeog";
-  const PUBLIC_KEY = "NgQKgn1W0l-4bPVA2";
+  const SERVICE_ID = "service_d5w7yz8";
+  const TEMPLATE_ID = "template_sw70mc9";
+  const PUBLIC_KEY = "a0v05MoRetAvja0Gx";
 
   useEffect(() => {
     if (PUBLIC_KEY && PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
