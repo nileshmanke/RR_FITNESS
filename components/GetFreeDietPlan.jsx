@@ -1,9 +1,10 @@
-// src/components/GetFreeDietPlan.jsx
 import React, { useState, useEffect } from "react";
 import { init, send } from "@emailjs/browser";
 
+
+
 export default function GetFreeDietPlan() {
-  // Replace these with your EmailJS values
+  
   const SERVICE_ID = "service_d5w7yz8";
   const TEMPLATE_ID = "template_sw70mc9";
   const PUBLIC_KEY = "a0v05MoRetAvja0Gx";
@@ -29,7 +30,7 @@ export default function GetFreeDietPlan() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null); // success or error text
+  const [message, setMessage] = useState(null); 
   const [error, setError] = useState(null);
 
   function handleChange(e) {
@@ -40,13 +41,15 @@ export default function GetFreeDietPlan() {
   function validate() {
     if (!form.name.trim()) return "Please enter your name.";
     if (!form.email.trim()) return "Please enter your email.";
+
     if (form.phone.trim()) {
-    const cleaned = form.phone.replace(/\D/g, ""); // remove spaces/dashes
-    if (cleaned.length !== 10) {
-      return "Please enter a valid 10-digit phone number.";
+      const cleaned = form.phone.replace(/\D/g, ""); // remove spaces/dashes
+      if (cleaned.length !== 10) {
+        return "Please enter a valid 10-digit phone number.";
+      }
     }
-  }
-    // simple email regex
+
+    
     if (!/^\S+@\S+\.\S+$/.test(form.email)) return "Please enter a valid email.";
     if (!form.heightCm || isNaN(Number(form.heightCm))) return "Please enter height in cm.";
     if (!form.weightKg || isNaN(Number(form.weightKg))) return "Please enter weight in kg.";
@@ -64,7 +67,7 @@ export default function GetFreeDietPlan() {
       return;
     }
 
-    // prepare template params (match your EmailJS template variables)
+    
     const templateParams = {
       name: form.name,
       email: form.email,
@@ -77,16 +80,36 @@ export default function GetFreeDietPlan() {
       goals: form.goals || "N/A",
       allergies: form.allergies || "N/A",
       notes: form.notes || "N/A",
-      submittedAt: new Date().toLocaleString(),
+      submittedAt: new Date().toISOString(),
     };
 
     try {
       setLoading(true);
-      // send email via EmailJS
-      const res = await send(SERVICE_ID, TEMPLATE_ID, templateParams);
-      // res.status === 200 means success
-      setMessage("Thank you — we received your info. We will send the diet plan you deserve to your email soon.");
-      // optionally reset form
+
+      
+      await send(SERVICE_ID, TEMPLATE_ID, templateParams);
+
+     
+      const BACKEND_URL ="http://localhost:5000";
+
+      const resp = await fetch(`${BACKEND_URL}/api/diet-requests`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(templateParams),
+      });
+
+      if (!resp.ok) {
+      
+        const text = await resp.text().catch(() => "");
+        console.error("DB save failed", resp.status, text);
+        setError("Email sent but saving to database failed. Please try again or contact us.");
+        return;
+      }
+
+      
+      setMessage("Thank you — we received your info. We will send the diet plan to your email soon.");
+
+      
       setForm({
         name: "",
         email: "",
@@ -101,7 +124,7 @@ export default function GetFreeDietPlan() {
         notes: "",
       });
     } catch (err) {
-      console.error("Email send error:", err);
+      console.error("Submission error:", err);
       setError("Something went wrong while sending. Please try again or contact us directly.");
     } finally {
       setLoading(false);
